@@ -306,6 +306,14 @@ $listcoup=$coup1c->afficher_coup();
                 </tr>
                 </tfoot>
               </table>
+              <form method="POST" action="supp-coup.php"> 
+             <div class="col-md-6">
+                <label for="supprimer"> l'element à supprimer </label>
+                <input type="number" name="id_coup" class ="form-control" placeholder="id pour coupons a supprimer" > 
+              </div>
+              <div class="col-md-6">
+              <td><input type="submit"  value="submit"  class="btn btn-block bg-gradient-primary" ></td>
+              </div></form>
             </div>
             <!-- /.card-body -->
           </div>

@@ -304,8 +304,17 @@ $listpromo=$promo1c->afficher_promo();
                   <th>CSS grade</th>
                 </tr>
                 </tfoot>
-              </table>
-            </div>
+              </div> 
+             </table>
+             <form method="POST" action="supp-promo.php"> 
+             <div class="col-md-6">
+                <label for="supprimer"> l'element à supprimer </label>
+                <input type="number" name="id_promo" class ="form-control" placeholder="enter da money!" > 
+              </div>
+              <div class="col-md-6">
+              <td><input type="submit"  value="submit"  class="btn btn-block bg-gradient-primary" ></td>
+              </div></form>
+           </div>
             <!-- /.card-body -->
           </div>
           <!-- /.card -->
