@@ -8,7 +8,7 @@ $listcoup=$coup1c->afficher_coup();
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>AdminLTE 3 | DataTables</title>
-  <!-- Tell the browser to be responsive to screen width -->
+  <!-- Tell the Prix Reduction to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Font Awesome -->
@@ -274,11 +274,11 @@ $listcoup=$coup1c->afficher_coup();
               <table id="example1" class="table table-bordered table-striped">
                 <thead>
                 <tr>
-                  <th>Rendering engine</th>
-                  <th>Browser</th>
-                  <th>Platform(s)</th>
-                  <th>Engine version</th>
-                  <th>CSS grade</th>
+                  <th>Id de Promotion</th>
+                  <th>Prix Reduction</th>
+                  <th>Id Client</th>
+                  <th>Date Debut</th>
+                  <th>Date Fin</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -298,21 +298,43 @@ $listcoup=$coup1c->afficher_coup();
                 </tbody>
                 <tfoot>
                 <tr>
-                  <th>Rendering engine</th>
-                  <th>Browser</th>
-                  <th>Platform(s)</th>
-                  <th>Engine version</th>
-                  <th>CSS grade</th>
+                  <th>Id de Promotion</th>
+                  <th>Prix Reduction</th>
+                  <th>Id Client</th>
+                  <th>Date Debut</th>
+                  <th>Date Fin</th>
                 </tr>
                 </tfoot>
               </table>
               <form method="POST" action="supp-coup.php"> 
              <div class="col-md-6">
-                <label for="supprimer"> l'element à supprimer </label>
-                <input type="number" name="id_coup" class ="form-control" placeholder="id pour coupons a supprimer" > 
+                <label for="id_coup"> l'element à supprimer </label>
+                <input type="number" name="id_coup" class ="form-control" placeholder="id pour coupons a supprimer" required > 
               </div>
               <div class="col-md-6">
-              <td><input type="submit"  value="submit"  class="btn btn-block bg-gradient-primary" ></td>
+              <td><input type="submit"  value="supprimer"  class="btn btn-block bg-gradient-primary"  ></td>
+              </div></form>
+              <form method="POST" action="modif-coup.php">
+             <div class="col-lg-6">
+              <div class="form-group">
+                <label for="id_coup">Id de coupons </label>
+                <input type="number" name="id_coup" class ="form-control" placeholder="enter da money!"> 
+              </div>
+              <div class="form-group">
+                <label for="prix_red">Prix de Reduction  </label>
+                <input type="number" name="prix_red" class ="form-control" placeholder="enter da money!"> 
+              </div>
+              <div class="form-group">
+                <label> end date </label> 
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="far fa-calendar-alt"></i></span>
+                    </div>
+                    <input type="date" name="date_fin" class="form-control" data-inputmask-alias="datetime" data-inputmask-inputformat="yyyy/mm/dd" data-mask="" im-insert="false" required>
+                  </div>
+               </div>
+               <div>
+              <td><input type="submit"  value="modifier"  class="btn btn-block bg-gradient-primary" ></td>
               </div></form>
             </div>
             <!-- /.card-body -->

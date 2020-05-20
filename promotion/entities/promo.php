@@ -4,9 +4,11 @@ class promo{
     private $prix_red;
     private $id_produit;
     private $date_fin;
- function _construct($prix_red,$id_produit,$date_fin){
+ function _construct($id_promo,$prix_red,$id_produit,$date_debut,$date_fin){
+      $this->id_promo=$id_promo;
       $this->prix_red=$prix_red;
       $this->id_produit=$id_produit;
+      $this->date_debut=$date_debut;
       $this->date_fin=$date_fin;
 }       
 function getid_promo(){
@@ -18,7 +20,9 @@ function getprix_red(){
 function getid_produit(){
     return $this->id_produit;
  }
-function getdate_fin(){
+function getdate_debut()
+{return $this->date_debut;}
+ function getdate_fin(){
     return $this->date_fin;
  }
 function setid_promo($id_promo){

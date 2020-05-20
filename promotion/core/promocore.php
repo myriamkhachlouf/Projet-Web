@@ -45,15 +45,13 @@ class promo_core{
             die('Erreur: '.$e->getMessage());
         }
     }
-    function modifier_promo($promo,$id_promo){
+    function modifier_promo($id_promo,$prix_red,$date_fin){
         $sql="update promotion set Prix_Red=:prix_red,date_fin=:date_fin where Id_Solde=:id_promo";
         $db = config::getConnexion();
 		
     try{		
         $req=$db->prepare($sql);
-        $id_promo=$promo->getid_promo();
-        $prix_red=$promo->getprix_red();
-        $date_fin=$promo->getdate_fin(); 
+        $req->bindvalue("id_promo",$id_promo);
         $req->bindValue(":prix_red",$prix_red);
         $req->bindValue("date_fin",$date_fin);
         $req->execute();

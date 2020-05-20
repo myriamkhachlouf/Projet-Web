@@ -31,11 +31,11 @@ class coup_core{
             die('Erreur: '.$e->getMessage());
             }	
     }
-    function supprimer_coup($id_coupons){
-        $sql="DELETE FROM couption where Id_Coupe= :id_coupons";
+    function supprimer_coup($id_coup){
+        $sql="DELETE FROM coupons where Id_Coup=:id_coup";
 		$db = config::getConnexion();
         $req=$db->prepare($sql);
-		$req->bindValue(':id_coupons',$id_coupons);
+		$req->bindValue(':id_coup',$id_coup);
 		try{
             $req->execute();
           
@@ -44,17 +44,15 @@ class coup_core{
             die('Erreur: '.$e->getMessage());
             }
     }
-    function modifier_coup($coupons,$id_coup){
-        $sql="UPDATE coupons set Prix_Redc=:prix_red,date_fin=:date_fin where Id_Coup=:id_coupons";
+    function modifier_coup($id_coup,$prix_red,$date_fin){
+        $sql="UPDATE coupons set Prix_Redc=:prix_red,date_fin=:date_fin where Id_Coup=:id_coup";
         $db = config::getConnexion();
 		
      try{		
         $req=$db->prepare($sql);
-        $id_coupons=$coupons->getid_coupons();
-        $prix_red=$coupons->getprix_red();
-        $date_fin=$coupons->getdate_fin(); 
+        $req->bindvalue(":id_coup",$id_coup);
         $req->bindValue(":prix_red",$prix_red);
-        $req->bindValue("date_fin",$date_fin);
+        $req->bindValue(":date_fin",$date_fin);
         $req->execute();
            
         }

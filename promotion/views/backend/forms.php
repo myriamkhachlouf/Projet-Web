@@ -273,11 +273,11 @@
             <div class="card-body">
               <div class="form-group">
                 <label for="prix_red"> Prix de Reduction </label>
-                <input type="number" name="prix_red" class ="form-control" placeholder="enter da money!"> 
+                <input type="number" name="prix_red" class ="form-control" placeholder="enter da money!" required> 
               </div> 
               <div class="form-group">
                 <label for="id produit"> product id  </label>
-                <input type="number" name="id_produit" class ="form-control" placeholder="enter da id!"> 
+                <input type="number" name="id_produit" class ="form-control" placeholder="enter da id!"required> 
               </div> 
                <div class="form-group">
                 <label for="date_fin"> end date </label> 
@@ -285,7 +285,7 @@
                     <div class="input-group-prepend">
                       <span class="input-group-text"><i class="far fa-calendar-alt"></i></span>
                     </div>
-                    <input type="date" name ="date_fin" class="form-control" data-inputmask-alias="datetime" data-inputmask-inputformat="yyyy/mm/dd" data-maskim-insert="false">
+                    <input type="date" name ="date_fin" class="form-control" data-inputmask-alias="datetime" data-inputmask-inputformat="yyyy/mm/dd" data-maskim-insert="false" required>
                   </div>
                </div>
               </div>  
@@ -305,11 +305,11 @@
             <div class="card-body">
               <div class="form-group">
                 <label> Prix de Reduction </label>
-                <input type="number" name="prix_red" class ="form-control" placeholder="enter da money!"> 
+                <input type="number" name="prix_red" class ="form-control" placeholder="enter da money!"  required> 
               </div>   
               <div class="form-group">
                 <label> Client Id </label>
-                <input type="password" name="id_client" class="form-control" placeholder= "entra da product id">
+                <input type="password" name="id_client" class="form-control" placeholder= "entra da product id" required>
               </div>
                <div class="form-group">
                 <label> end date </label> 
@@ -317,7 +317,7 @@
                     <div class="input-group-prepend">
                       <span class="input-group-text"><i class="far fa-calendar-alt"></i></span>
                     </div>
-                    <input type="date" name="date_fin" class="form-control" data-inputmask-alias="datetime" data-inputmask-inputformat="yyyy/mm/dd" data-mask="" im-insert="false">
+                    <input type="date" name="date_fin" class="form-control" data-inputmask-alias="datetime" data-inputmask-inputformat="yyyy/mm/dd" data-mask="" im-insert="false" required>
                   </div>
                </div>
               </div>  

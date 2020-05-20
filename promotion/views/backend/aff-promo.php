@@ -273,11 +273,11 @@ $listpromo=$promo1c->afficher_promo();
               <table id="example1" class="table table-bordered table-striped">
                 <thead>
                 <tr>
-                  <th>Rendering engine</th>
-                  <th>Browser</th>
-                  <th>Platform(s)</th>
-                  <th>Engine version</th>
-                  <th>CSS grade</th>
+                  <th>Id Promotion</th>
+                  <th>Prix reduction</th>
+                  <th>Id produit</th>
+                  <th>Date_Debut</th>
+                  <th>Date_Fin</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -297,35 +297,59 @@ $listpromo=$promo1c->afficher_promo();
                 </tbody>
                 <tfoot>
                 <tr>
-                  <th>Rendering engine</th>
-                  <th>Browser</th>
-                  <th>Platform(s)</th>
-                  <th>Engine version</th>
-                  <th>CSS grade</th>
+                  <th>Id Promotion</th>
+                  <th>Prix Reduction</th>
+                  <th>Id Rroduit</th>
+                  <th>Date Debut</th>
+                  <th>Date Fin</th>
                 </tr>
                 </tfoot>
               </div> 
              </table>
              <form method="POST" action="supp-promo.php"> 
-             <div class="col-md-6">
+             <div class="col-lg-6">
                 <label for="supprimer"> l'element à supprimer </label>
                 <input type="number" name="id_promo" class ="form-control" placeholder="enter da money!" > 
               </div>
-              <div class="col-md-6">
+              <div class="col-lg-6">
               <td><input type="submit"  value="submit"  class="btn btn-block bg-gradient-primary" ></td>
               </div></form>
-           </div>
-            <!-- /.card-body -->
+             <form method="POST" action="modif-promo.php">
+             <div class="col-lg-6">
+              <div class="form-group">
+                <label for="id_promo">Id de promotion  </label>
+                <input type="number" name="id_promo" class ="form-control" placeholder="enter da money!"> 
+              </div>
+              <div class="form-group">
+                <label for="id_promo">Prix de Reduction  </label>
+                <input type="number" name="prix_red" class ="form-control" placeholder="enter da money!"> 
+              </div>
+              <div class="form-group">
+                <label> end date </label> 
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="far fa-calendar-alt"></i></span>
+                    </div>
+                    <input type="date" name="date_fin" class="form-control" data-inputmask-alias="datetime" data-inputmask-inputformat="yyyy/mm/dd" data-mask="" im-insert="false" required>
+                  </div>
+               </div>
+               <div>
+              <td><input type="submit"  value="submit"  class="btn btn-block bg-gradient-primary" ></td>
+              </div></form>
+             </div> 
+            </div> 
           </div>
-          <!-- /.card -->
+            <!-- /.card-body -->
         </div>
+          <!-- /.card -->
+       </div>
         <!-- /.col -->
       </div>
       <!-- /.row -->
     </section>
   </div>
 
-
+ 
 
 
 
