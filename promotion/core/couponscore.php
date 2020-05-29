@@ -2,14 +2,21 @@
 include "C:\\wamp\\www\\promotion\\entities\\coupons.php";
 include "C:\\wamp\\www\\promotion\\dbconfig.php";
 class coup_core{
-    function ajouter_coup($coupons){
+    //function lotto(){
+      //  $maxSql ="SELECT Id_Coup FROM coupons ORDER BY Id_Coup DESC LIMIT 1"; 
+        //$max = mysqli_fetch_array($maxSql);
+        //$max = $max['Id_Coup'];
+        //$id=mt_rand(1,$max);
+        //return $id
+          //      }
+    function ajouter_coup($prix_red,$id_client,$date_fin){
         $sql ="INSERT INTO  coupons values ( null,:prix_red,:id_client,CURDATE(),:date_fin)";
         $db = config::getConnexion();
 		try{
         $req=$db->prepare($sql);
-        $prix_red=$coupons->getprix_red();
-        $id_client=$coupons->getid_client();
-        $date_fin=$coupons->getdate_fin();
+        //$prix_red=$coupons->getprix_red();
+        //$id_client=$coupons-> getid_client();
+        //$date_fin=$coupons->getdate_fin();
         $req->bindValue(":prix_red",$prix_red);
         $req->bindValue(":id_client",$id_client);
         $req->bindValue("date_fin",$date_fin);

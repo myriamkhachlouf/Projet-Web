@@ -4,7 +4,7 @@ class coupons{
     private $prix_red;
     private $id_client;
     private $date_fin;
- function _construct($prix_red,$id_client,$date_fin){
+ function __construct($prix_red,$id_client,$date_fin){
       $this->prix_red=$prix_red;
       $this->id_client=$id_client;
       $this->date_fin=$date_fin;

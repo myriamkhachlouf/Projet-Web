@@ -37,6 +37,8 @@ $listpromo=$promo1c->afficher_promo();
         <a href="#" class="nav-link">Contact</a>
       </li>
     </ul>
+    
+
 
     <!-- SEARCH FORM -->
     <form class="form-inline ml-3">

@@ -1,15 +1,15 @@
 <?php
 include "C:\\wamp\\www\\promotion\\entities\\promo.php";
 include "C:\\wamp\\www\\promotion\\dbconfig.php";
-class promo_core{
-    function ajouter_promo($promo){
-        $sql ="INSERT INTO promotion values (null,:prix_red,:id_produit,CURDATE(),:date_fin)";
+    class promo_core{
+    function ajouter_promo($prix_red,$id_produit,$date_fin){
+        $sql = "INSERT INTO promotion (Prix_Red,Id_Prod,date_debut,date_fin) values (:prix_red,:id_produit,CURDATE(),:date_fin)";
         $db = config::getConnexion();
 		try{
         $req=$db->prepare($sql);
-        $prix_red=$promo->getprix_red();
-        $id_produit=$promo->getid_produit();
-        $date_fin=$promo->getdate_fin();
+        //$prix_red=$promo->getprix_red();
+        //$id_produit=$promo->getid_produit();
+        //'$date_fin=$promo->getdate_fin();
         $req->bindValue(':prix_red',$prix_red);
         $req->bindValue(':id_produit',$id_produit);
         $req->bindValue(':date_fin',$date_fin);

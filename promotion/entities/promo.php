@@ -4,7 +4,7 @@ class promo{
     private $prix_red;
     private $id_produit;
     private $date_fin;
- function _construct($id_promo,$prix_red,$id_produit,$date_debut,$date_fin){
+ function __construct($id_promo,$prix_red,$id_produit,$date_debut,$date_fin){
       $this->id_promo=$id_promo;
       $this->prix_red=$prix_red;
       $this->id_produit=$id_produit;
